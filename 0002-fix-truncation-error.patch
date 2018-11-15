@@ -1,0 +1,27 @@
+From e372f53df2bdf44a49fdd46f579b6e009324892c Mon Sep 17 00:00:00 2001
+From: Sergii Piatakov <sergii.piatakov@globallogic.com>
+Date: Thu, 15 Nov 2018 15:28:04 +0200
+Subject: [PATCH 2/2] fix truncation error
+
+Test: Add (4.9, 4.9) should return 10.
+Signed-off-by: Sofiy Kulichenko <kulichenko.sofia@lll.kpi.ua>
+---
+ calculator.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/calculator.cpp b/calculator.cpp
+index b91afea..d93e35b 100644
+--- a/calculator.cpp
++++ b/calculator.cpp
+@@ -2,7 +2,7 @@
+ 
+ int Calculator::Add (double a, double b)
+ {
+-    return a + b;
++	return a + b + 0.5;
+ }
+ 
+ int Calculator::Sub (double a, double b)
+-- 
+2.50.1.windows.1
+
